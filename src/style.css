@@ -86,6 +86,31 @@ body {
   outline: 0px;
   text-rendering: optimizeLegibility;
 }
+@media screen and (max-width: 600px) {
+  .input {
+    height: 40px;
+    width: 200px;
+  }
+  .searchBox {
+    flex-direction: column;
+  }
+  .button_1 {
+    padding-bottom: 8px;
+    margin-top: 20px;
+    transform: translateX(20px);
+  }
+  .TodoList {
+    width: 70vw;
+    transform: translateX(13vh);
+    margin-top: 10px;
+  }
+  .time {
+    margin-right: 110px;
+  }
+  .caption {
+    transform: translateX(42px);
+  }
+}
 .searchBox {
   display: flex;
 }
@@ -130,6 +155,7 @@ body {
   font-size: smaller;
   opacity: 0.4;
   transform: translateX(120px);
+  margin-right: 110px;
 }
 .time:hover {
   font-size: medium;

@@ -22,7 +22,6 @@ export default function TodList(props) {
   return (
     <div className="main_todo">
       {props.list.map((todos) => {
-        console.log(todos);
         return (
           <div className="TodoList">
             <h2>{todos.todo}</h2>
