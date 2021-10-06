@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
+* {
+  font-family: 'Epilogue', sans-serif;
+}
+body {
+  background: #83a4d4; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #b6fbff,
+    #83a4d4
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #b6fbff,
+    #83a4d4
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 13px;
+  height: 13px;
+}
+::-webkit-scrollbar-button {
+  width: 33px;
+  height: 33px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 9px none #ffffff;
+  border-radius: 70px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffffb2;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #138836;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 97px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+.app {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.button_1 {
+  border: 2px solid rgb(95, 158, 140);
+  color: aliceblue;
+  text-align: center;
+  padding-top: 11px;
+  border-radius: 20px;
+  background-color: rgb(95, 158, 160);
+  width: 134px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.button_1:hover {
+  border: 2px solid rgb(49, 87, 76);
+  background-color: rgb(46, 93, 95);
+}
+.input {
+  font-size: 15px;
+  font-weight: bold;
+  padding-left: 20px;
+  color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.548);
+  height: 40px;
+  width: 310px;
+  border-radius: 12px;
+  border: 0px;
+  outline: 0px;
+  text-rendering: optimizeLegibility;
+}
+.searchBox {
+  display: flex;
+}
+.TodoList {
+  margin-bottom: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+  background-color: #636e723b;
+  opacity: 0.6;
+  padding-left: 20px;
+  border-radius: 10px;
+}
+.TodoList:hover {
+  opacity: 1;
+  background: linear-gradient(to right, #73c8a9, #373b44);
+  color: white;
+}
+
+.FiX {
+  margin-right: 20px;
+  cursor: pointer;
+}
+.FiX:hover {
+  color: red;
+}
+.TypeBox {
+  position: fixed;
+}
+.main_todo {
+  height: 300px;
+  width: 500px;
+  padding: 10px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scrollbar-color: red;
+}
+.time {
+  transition: 0.9s;
+  font-size: smaller;
+  opacity: 0.4;
+  transform: translateX(120px);
+}
+.time:hover {
+  font-size: medium;
+  opacity: 0.9;
+}
+.caption {
+  margin-right: 100px;
+  color: aliceblue;
+}
