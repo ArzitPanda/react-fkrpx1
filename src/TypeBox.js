@@ -1,13 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
+import { addDoc } from 'firebase/firestore';
+import { todoRef } from './FireBase';
+
 export default function TypeBox(props) {
+  function getTime() {
+    var today = new Date();
+
+    var time = today.getHours() + ':' + today.getMinutes();
+    var dateTime = time;
+    return dateTime;
+  }
+  var time = getTime();
   const [todo, setTodo] = useState('');
+  const CreateTodo = async () => {
+    await addDoc(todoRef, { todo: todo, date: time });
+
+    setTodo('');
+  };
+
   function add(e) {
     if (e.key === 'Enter') {
-      props.SetList([
-        ...props.list,
-        { id: new Date().getTime().toString(), todo: todo },
-      ]);
+      CreateTodo();
     }
   }
   return (
@@ -22,15 +36,7 @@ export default function TypeBox(props) {
           add(e);
         }}
       />
-      <div
-        className="button_1"
-        onClick={() => {
-          props.SetList([
-            ...props.list,
-            { id: new Date().getTime().toString(), todo: todo },
-          ]);
-        }}
-      >
+      <div className="button_1" onClick={CreateTodo}>
         submit
       </div>
     </div>

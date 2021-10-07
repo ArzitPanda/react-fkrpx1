@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app';
-
+import { getFirestore } from '@firebase/firestore';
+import { collection } from 'firebase/firestore';
 const firebaseConfig = {
   apiKey: 'AIzaSyB6N8TrbpOuvpRLkXzOITWIECuFQdJyRpE',
   authDomain: 'todo-app-e1829.firebaseapp.com',
@@ -10,3 +11,5 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
+export const todoRef = collection(db, 'todo');
